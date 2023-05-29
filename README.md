@@ -8,5 +8,3 @@ this is the practice repo for devops b5 batch.
 
 
 
-
-shell ```
