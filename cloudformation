@@ -1,0 +1,31 @@
+Parameters:
+  MyKeyPairName:
+    Type: String
+  MyImageId:
+    Type: String
+Resources:
+  MyEC2Instance:
+    Type: AWS::EC2::Instance
+    Properties:
+      Userdata:
+        Fn::Base64:
+          #!/bin/bash
+          sudo yum install httpd -y
+          systemctl start httpd
+          systemctl enable httpd
+          echo "<h1>hello cloud, its supposed to be cold today</h1>" > /var/www/html/index.html
+      KeyName: !ref MyKeyPairName
+      InstanceType: 
+        - Type: t2.micro
+      SecurityGroups: 
+        - !Ref MySecurityGroup
+      ImageId: !Ref MyImageId
+  MySecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Allowing SSH From everywhere
+      SecurityGroupIngress:
+        IpProtocol: [tcp]
+        FromPort: '22'
+        ToPort: '22'
+        CidrIp: 0.0.0.0/0

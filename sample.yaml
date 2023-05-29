@@ -1,0 +1,43 @@
+name: suraj
+  nick name:
+age: 25
+city: nagpur
+male: true
+number -- any number
+String ----- group of charector
+boolean--- true or false 0 1, yes , no
+list
+
+companies: --- list name
+  - IBM
+  - HP
+  - aws
+
+map
+emp details: ------ dictionary
+  name:
+  age:
+  gendor:
+  address:
+    city:
+    area:
+
+map of list
+tainers details:
+  AWS trainer:
+    - name: suraj
+      address:
+        city: pune
+        area:
+        pin code: 
+    - name: shubham
+  Devops trainer:
+    - suraj
+    - shubham
+    - rajat
+
+
+
+
+
+

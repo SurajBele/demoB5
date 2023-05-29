@@ -3,7 +3,7 @@ services:
   webserver:
     image: surajbele/students:v2
     ports:
-      - 8081:8080
+      - 8080:8080
   appserver:
     image: httpd
     ports:
