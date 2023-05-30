@@ -9,7 +9,9 @@ boolean--- true or false 0 1, yes , no
 list
 
 companies: --- list name
-  - IBM
+  - IBI
+      name: indian company
+      age: 30year
   - HP
   - aws
 
@@ -31,6 +33,9 @@ tainers details:
         area:
         pin code: 
     - name: shubham
+      address:
+        city: nagpur
+        
   Devops trainer:
     - suraj
     - shubham
