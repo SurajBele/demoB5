@@ -1,0 +1,10 @@
+- name: prompt variable
+  hosts: all
+  vars_prompt:
+    - name: prompt
+      prompt: enter your varible value
+  tasks:
+    - name: print
+      debug:
+        msg: "{{prompt}}"
+      

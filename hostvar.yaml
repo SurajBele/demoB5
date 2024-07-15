@@ -1,0 +1,6 @@
+- name: hostvariable
+  hosts: all
+  tasks:
+    - name: host
+      debug:
+        msg: "{{URL}}"

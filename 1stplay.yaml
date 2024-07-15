@@ -1,10 +1,10 @@
 - name: 1st playbook
   hosts: all
   tasks:
+  vars_files:
+  - ./var.txt
     - name: 1st tasks
       debug: 
         msg: "Hello cloud"
     - name: 2nd task
-      shell:
-       hostname
-       apt update
+      shell: hostname
