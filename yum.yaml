@@ -1,8 +1,22 @@
 - name: yum playbook
   hosts: all
+  become: true
   tasks:
     - name: install httpd
       yum: 
-        name: httpd
-        state:
+        name: htpd
+        state: latest
+      when: "os_family"= "Redhat"
+      apt:
+        name: apache2
+        satate: latest
+      when: "os_family"
+
+
+      package:
+        name: {{items}}
+      loop:
+        - httpd 
+        - wget
+        - vim
         
